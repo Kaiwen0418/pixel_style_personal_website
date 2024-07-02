@@ -11,15 +11,33 @@ const RecipeDetailsPage = () => {
     return <div>Recipe not found</div>;
   }
 
-  const DottedBox = ({ children, className = "" }) => (
+  const DottedBox = ({
+    children,
+    className = "",
+    title,
+    subtitle,
+    titleSize = "text-2xl",
+    paddingTop = "pt-4",
+  }) => (
     <div
-      className={`border-4 border-dotted border-black p-4 ${className}`}
+      className={`relative border-4 border-dotted border-black ${className}`}
       style={{
-        borderImageSlice: "33% 33%",
+        borderImageSlice: "16.5% 16.5%",
         borderImageRepeat: "round",
       }}
     >
-      {children}
+      {title && (
+        <div className="absolute top-0 left-0 w-full -mt-4 text-center">
+          <span className="relative inline-block px-4 bg-white">
+            <span className="relative z-10 whitespace-nowrap text-2xl font-bold">
+              {title}
+            </span>
+            <span className="absolute inset-0 bg-white"></span>
+          </span>
+          {subtitle && <div className="mt-1 text-sm italic">{subtitle}</div>}
+        </div>
+      )}
+      <div className={`${paddingTop} p-2`}>{children}</div>
     </div>
   );
 
@@ -27,13 +45,14 @@ const RecipeDetailsPage = () => {
     <RetroWindowWrapper activeTab="Index">
       {/* Main content */}
       <div className="p-4 flex space-x-4 overflow-y-auto h-[calc(100%-2rem)]">
-        <DottedBox className="w-1/2">
-          <h2 className="text-2xl mb-2 text-left">{recipe.name}</h2>
-          <p className="text-sm italic mb-4 text-left">
-            {recipe.scientificName}
-          </p>
-
-          <div className="grid grid-cols-2 gap-4 mb-4">
+        <DottedBox
+          className="w-1/2"
+          title={recipe.name}
+          subtitle={recipe.scientificName}
+          paddingTop="pt-14"
+          titleSize="text-3xl"
+        >
+          <div className="mb-4 flex justify-center space-x-4">
             <div className="w-36 h-36 overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
               <img
                 src={recipe.images.plant}
@@ -50,26 +69,26 @@ const RecipeDetailsPage = () => {
             </div>
           </div>
 
-          <table className="w-full text-sm">
-            <tbody>
-              {recipe.details.map(([label, value]) => (
-                <tr key={label}>
-                  <td className="text-right pr-2">{label}</td>
-                  <td className="text-left">{value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="flex justify-center">
+            <table className="text-sm">
+              <tbody>
+                {recipe.details.map(([label, value]) => (
+                  <tr key={label}>
+                    <td className="text-right pr-4">{label}</td>
+                    <td className="text-left">{value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </DottedBox>
 
         <div className="w-1/2 space-y-4">
-          <DottedBox>
-            <h3 className="text-lg mb-2 text-left">Identification</h3>
+          <DottedBox title="Identification">
             <p className="text-sm text-left">{recipe.identification}</p>
           </DottedBox>
 
-          <DottedBox>
-            <h3 className="text-lg mb-2 text-left">Batch Notes</h3>
+          <DottedBox title="Batch Notes">
             <p className="text-sm text-left">{recipe.batchNotes}</p>
           </DottedBox>
 

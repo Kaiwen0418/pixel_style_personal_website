@@ -6,6 +6,13 @@ import RetroWindowWrapper from "./components/RetroWindowWrapper";
 import Layout from "./components/Layout";
 import "./globals.css";
 
+const ArtworkPage = () => (
+  <RetroWindowWrapper activeTab="Artwork">
+    <h2 className="text-2xl mb-4">Artwork</h2>
+    <p>This is the Artwork page content.</p>
+  </RetroWindowWrapper>
+);
+
 const ProcessPage = () => (
   <RetroWindowWrapper activeTab="Process">
     <h2 className="text-2xl mb-4">Process</h2>
@@ -20,25 +27,16 @@ const AboutPage = () => (
   </RetroWindowWrapper>
 );
 
-const ContributePage = () => (
-  <RetroWindowWrapper activeTab="Contribute">
-    <h2 className="text-2xl mb-4">Contribute</h2>
-    <p>This is the Contribute page content.</p>
-  </RetroWindowWrapper>
-);
-
 const App = () => {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<IndexPage />} />
-          <Route path="/recipe/:id" element={<RecipeDetailsPage />} />
-          <Route path="/process" element={<ProcessPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contribute" element={<ContributePage />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route path="/" element={<IndexPage />} />
+        <Route path="/recipe/:id" element={<RecipeDetailsPage />} />
+        <Route path="/artwork" element={<ArtworkPage />} />
+        <Route path="/process" element={<ProcessPage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
     </Router>
   );
 };

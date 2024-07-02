@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const RetroWindowWrapper = ({ children, activeTab }) => {
-  const menuItems = ["Index", "Process", "About", "Contribute"];
+  const menuItems = ["Index", "Artwork", "Process", "About"];
 
   return (
     <div className="font-mono text-black bg-white border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rounded-lg w-[800px] h-[600px] overflow-hidden relative">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import RetroWindowWrapper from "./RetroWindowWrapper";
+import RetroWindowWrapper from "./components/RetroWindowWrapper";
 
 const IndexPage = () => {
   const images = [

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import IndexPage from "./IndexPage";
 import RecipeDetailsPage from "./components/RecipeDetailsPage";
 import RetroWindowWrapper from "./components/RetroWindowWrapper";
-import Layout from "./components/Layout";
 import "./globals.css";
 
 const ArtworkPage = () => (

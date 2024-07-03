@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import RetroWindowWrapper from "./RetroWindowWrapper";
 import { recipeData } from "../data/data";
+import DottedBox from "./DottedBox";
 
 const DesktopRecipeDetailsPage = () => {
   const { id } = useParams();
@@ -10,38 +11,6 @@ const DesktopRecipeDetailsPage = () => {
   if (!recipe) {
     return <div>Recipe not found</div>;
   }
-
-  console.log("desktop page");
-
-  const DottedBox = ({
-    children,
-    className = "",
-    title,
-    subtitle,
-    titleSize = "text-2xl",
-    paddingTop = "pt-4",
-  }) => (
-    <div
-      className={`relative border-4 border-dotted border-black ${className}`}
-      style={{
-        borderImageSlice: "16.5% 16.5%",
-        borderImageRepeat: "round",
-      }}
-    >
-      {title && (
-        <div className="absolute top-0 left-0 w-full -mt-4 text-center">
-          <span className="relative inline-block px-4 bg-white">
-            <span className="relative z-10 whitespace-nowrap text-2xl font-bold">
-              {title}
-            </span>
-            <span className="absolute inset-0 bg-white"></span>
-          </span>
-          {subtitle && <div className="mt-1 text-sm italic">{subtitle}</div>}
-        </div>
-      )}
-      <div className={`${paddingTop} p-2`}>{children}</div>
-    </div>
-  );
 
   return (
     <RetroWindowWrapper activeTab="Index">

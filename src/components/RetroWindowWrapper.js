@@ -5,7 +5,7 @@ const RetroWindowWrapper = ({ children, activeTab }) => {
   const menuItems = ["Index", "Artwork", "Process", "About"];
 
   return (
-    <div className="pt-4 pl-4">
+    <div className="pt-4 pl-4 flex items-center justify-center h-screen">
       <div className="font-mono text-black bg-white border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rounded-lg w-[800px] h-[600px] overflow-hidden relative">
         {/* Window chrome */}
         <div className="bg-white border-b-2 border-black p-1 flex justify-between items-center">

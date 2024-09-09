@@ -3,8 +3,8 @@ export const recipeData = {
     name: "Garlic Mustard",
     scientificName: "Alliaria petiolata",
     images: {
-      plant: "/images/garlic_mustard_plant.png",
-      color: "/images/garlic_mustard_color.png",
+      plant: "/images/personal_site1.png",
+      color: "/images/personal_site1.png",
     },
     details: [
       ["condition", "fresh"],
@@ -23,8 +23,8 @@ export const recipeData = {
     name: "Garlic Mustard",
     scientificName: "Alliaria petiolata",
     images: {
-      plant: "/images/garlic_mustard_plant.png",
-      color: "/images/garlic_mustard_color.png",
+      plant: "/images/personal_site2.png",
+      color: "/images/personal_site2.png",
     },
     details: [
       ["condition", "fresh"],
@@ -43,8 +43,8 @@ export const recipeData = {
     name: "Garlic Mustard",
     scientificName: "Alliaria petiolata",
     images: {
-      plant: "/images/garlic_mustard_plant.png",
-      color: "/images/garlic_mustard_color.png",
+      plant: "/images/personal_site3.png",
+      color: "/images/personal_site3.png",
     },
     details: [
       ["condition", "fresh"],
@@ -63,8 +63,8 @@ export const recipeData = {
     name: "Garlic Mustard",
     scientificName: "Alliaria petiolata",
     images: {
-      plant: "/images/garlic_mustard_plant.png",
-      color: "/images/garlic_mustard_color.png",
+      plant: "/images/personal_site4.png",
+      color: "/images/personal_site4.png",
     },
     details: [
       ["condition", "fresh"],

@@ -1,12 +1,33 @@
 import React from "react";
 import { personalProfile } from "../data/data";
+import { useDevice } from '../utils/DeviceContext';
 import DottedBox from "./DottedBox";
+
 
 const PersonalProfile = () => {
     const profile = personalProfile[1]
+    const isMobileDevice = useDevice();
+
     if (!profile) {
         return <div>Profile not found</div>;
     }
+
+    const details = isMobileDevice ? profile.details.slice(0,2) : profile.details
+
+    const detailSection = (
+            <div className="flex justify-center">
+                <table className="text-sm">
+                    <tbody>
+                    {details.map(([label, value]) => (
+                        <tr key={label}>
+                            <td className="text-right pr-4">{label}</td>
+                            <td className="text-left">{value}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
+        );
 
     return (
                 <DottedBox
@@ -24,19 +45,7 @@ const PersonalProfile = () => {
                             />
                         </div>
                     </div>
-
-                    <div className="flex justify-center">
-                        <table className="text-sm">
-                            <tbody>
-                            {profile.details.map(([label, value]) => (
-                                <tr key={label}>
-                                    <td className="text-right pr-4">{label}</td>
-                                    <td className="text-left">{value}</td>
-                                </tr>
-                            ))}
-                            </tbody>
-                        </table>
-                    </div>
+                    {detailSection}
                 </DottedBox>
     );
 };

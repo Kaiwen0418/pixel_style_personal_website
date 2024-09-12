@@ -1,10 +1,10 @@
 export const recipeData = {
   1: {
-    name: "Garlic Mustard",
+    name: "Embedded Security Camera System",
     scientificName: "Alliaria petiolata",
     images: {
+      color: "/images/camera.gif",
       plant: "/images/personal_site1.png",
-      color: "/images/personal_site1.png",
     },
     details: [
       ["condition", "fresh"],
@@ -20,11 +20,11 @@ export const recipeData = {
     batchNotes: "Used leaves and stems 24 hours after harvesting.",
   },
   2: {
-    name: "Garlic Mustard",
+    name: "CNC Factory Scheduling System",
     scientificName: "Alliaria petiolata",
     images: {
+      color: "/images/cnc.gif",
       plant: "/images/personal_site2.png",
-      color: "/images/personal_site2.png",
     },
     details: [
       ["condition", "fresh"],
@@ -40,11 +40,11 @@ export const recipeData = {
     batchNotes: "Used leaves and stems 24 hours after harvesting.",
   },
   3: {
-    name: "Garlic Mustard",
+    name: "Circuit Simulator on .NET",
     scientificName: "Alliaria petiolata",
     images: {
+      color: "/images/circuit.gif",
       plant: "/images/personal_site3.png",
-      color: "/images/personal_site3.png",
     },
     details: [
       ["condition", "fresh"],
@@ -60,11 +60,11 @@ export const recipeData = {
     batchNotes: "Used leaves and stems 24 hours after harvesting.",
   },
   4: {
-    name: "Garlic Mustard",
+    name: "Math to Braille OCR Translation",
     scientificName: "Alliaria petiolata",
     images: {
+      color: "/images/braille.gif",
       plant: "/images/personal_site4.png",
-      color: "/images/personal_site4.png",
     },
     details: [
       ["condition", "fresh"],

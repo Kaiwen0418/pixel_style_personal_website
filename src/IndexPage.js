@@ -2,11 +2,11 @@ import React from "react";
 import RetroWindowWrapper from "./components/RetroWindowWrapper";
 import PersonalProfile from "./components/PersonalProfile";
 import ProjectsGrid from "./components/ProjectGrid";
-import { recipeData } from "./data/data";
+import { projData } from "./data/data";
 import { useDevice } from './utils/DeviceContext';
 
 const IndexPage = () => {
-  const recipeIds = Object.keys(recipeData);
+  const projIds = Object.keys(projData);
   const isMobileDevice = useDevice();
 
   const profileSection = (
@@ -17,13 +17,13 @@ const IndexPage = () => {
 
     const gridSection = (
         <div className={`${isMobileDevice ? "w-full h-2/5" : "w-3/5 h-full"} p-4 overflow-y-auto`}>
-            <ProjectsGrid recipeIds={recipeIds} recipeData={recipeData} />
+            <ProjectsGrid projIds={projIds} projData={projData} />
         </div>
     );
 
     return (
         <RetroWindowWrapper activeTab="Index">
-            <div className={`flex ${isMobileDevice ? "flex-col" : "flex-row"} overflow-hidden h-full`}>
+            <div className={`flex ${isMobileDevice ? "flex-col" : "flex-row  mt-5"} overflow-hidden`}>
                 {profileSection}
                 {gridSection}
             </div>

@@ -1,9 +1,10 @@
-export const recipeData = {
+export const projData = {
   1: {
-    name: "Embedded Security Camera System",
+    name: "Camera Embed System",
     scientificName: "Alliaria petiolata",
     images: {
-      color: "/images/camera.gif",
+      gif: "/images/proj_gif/camera.gif",
+      static: "/images/proj_static/camera.png",
       plant: "/images/personal_site1.png",
     },
     details: [
@@ -20,10 +21,11 @@ export const recipeData = {
     batchNotes: "Used leaves and stems 24 hours after harvesting.",
   },
   2: {
-    name: "CNC Factory Scheduling System",
+    name: "CNC Scheduling System",
     scientificName: "Alliaria petiolata",
     images: {
-      color: "/images/cnc.gif",
+      gif: "/images/proj_gif/cnc.gif",
+      static: "/images/proj_static/cnc.png",
       plant: "/images/personal_site2.png",
     },
     details: [
@@ -40,10 +42,11 @@ export const recipeData = {
     batchNotes: "Used leaves and stems 24 hours after harvesting.",
   },
   3: {
-    name: "Circuit Simulator on .NET",
+    name: "Circuit Simulator",
     scientificName: "Alliaria petiolata",
     images: {
-      color: "/images/circuit.gif",
+      gif: "/images/proj_gif/circuit.gif",
+      static: "/images/proj_static/circuit.png",
       plant: "/images/personal_site3.png",
     },
     details: [
@@ -60,51 +63,12 @@ export const recipeData = {
     batchNotes: "Used leaves and stems 24 hours after harvesting.",
   },
   4: {
-    name: "Math to Braille OCR Translation",
+    name: "Math to Braille OCR",
     scientificName: "Alliaria petiolata",
     images: {
-      color: "/images/braille.gif",
+      gif: "/images/proj_gif/braille.gif",
+      static: "/images/proj_static/braille.png",
       plant: "/images/personal_site4.png",
-    },
-    details: [
-      ["condition", "fresh"],
-      ["parts", "leaves and stems"],
-      ["pH", "9"],
-      ["ratio", "3:1"],
-      ["temp", "180F"],
-      ["extract time", "1 hr"],
-      ["dye time", "1 hr"],
-    ],
-    identification:
-        "Garlic mustard can be detected by sight and smell. The leaves are broad with scalloped edges. In springtime they produce small white flowers. The smell is very similar to garlic.",
-    batchNotes: "Used leaves and stems 24 hours after harvesting.",
-  },
-  5: {
-    name: "Garlic Mustard",
-    scientificName: "Alliaria petiolata",
-    images: {
-      plant: "/images/garlic_mustard_plant.png",
-      color: "/images/garlic_mustard_color.png",
-    },
-    details: [
-      ["condition", "fresh"],
-      ["parts", "leaves and stems"],
-      ["pH", "9"],
-      ["ratio", "3:1"],
-      ["temp", "180F"],
-      ["extract time", "1 hr"],
-      ["dye time", "1 hr"],
-    ],
-    identification:
-        "Garlic mustard can be detected by sight and smell. The leaves are broad with scalloped edges. In springtime they produce small white flowers. The smell is very similar to garlic.",
-    batchNotes: "Used leaves and stems 24 hours after harvesting.",
-  },
-  6: {
-    name: "Garlic Mustard",
-    scientificName: "Alliaria petiolata",
-    images: {
-      plant: "/images/garlic_mustard_plant.png",
-      color: "/images/garlic_mustard_color.png",
     },
     details: [
       ["condition", "fresh"],
@@ -131,7 +95,7 @@ export const personalProfile = {
     },
     details: [
       ["creativity", "95/100"],
-      ["stamina", "90/100 (Marathon Ready)"],
+      ["stamina", "90/100 "],
       ["Code Wizardry", "Level Mage"],
       ["Achievements", "Survivor of 48-Hour Hackathons, Conqueror of Cascade Mountains"]
 

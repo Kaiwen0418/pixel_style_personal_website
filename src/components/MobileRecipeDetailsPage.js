@@ -1,34 +1,34 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { recipeData } from "../data/data";
+import { projData } from "../data/data";
 import DottedBox from "./DottedBox";
 
-const MobileRecipeDetailsPage = () => {
+const MobileProjDetailsPage = () => {
   const { id } = useParams();
-  const recipe = recipeData[id];
+  const proj = projData[id];
 
-  if (!recipe) {
-    return <div>Recipe not found</div>;
+  if (!proj) {
+    return <div>proj not found</div>;
   }
 
   return (
     <div className="bg-white min-h-screen p-4 font-mono">
-      <h1 className="text-2xl font-bold mb-4 text-center">{recipe.name}</h1>
-      <p className="text-sm italic mb-4 text-center">{recipe.scientificName}</p>
+      <h1 className="text-2xl font-bold mb-4 text-center">{proj.name}</h1>
+      <p className="text-sm italic mb-4 text-center">{proj.scientificName}</p>
 
       <div className="space-y-4">
         <div className="flex flex-col items-center space-y-4 pb-4">
           <div className="w-full aspect-square max-w-xs overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
             <img
-              src={recipe.images.plant}
-              alt={`${recipe.name} plant`}
+              src={proj.images.plant}
+              alt={`${proj.name} plant`}
               className="w-full h-full object-cover"
             />
           </div>
           <div className="w-full aspect-square max-w-xs overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
             <img
-              src={recipe.images.color}
-              alt={`${recipe.name} color`}
+              src={proj.images.color}
+              alt={`${proj.name} color`}
               className="w-full h-full object-cover"
             />
           </div>
@@ -37,7 +37,7 @@ const MobileRecipeDetailsPage = () => {
         <DottedBox title="Details">
           <table className="w-full text-sm">
             <tbody>
-              {recipe.details.map(([label, value]) => (
+              {proj.details.map(([label, value]) => (
                 <tr key={label}>
                   <td className="text-right pr-4 font-bold">{label}</td>
                   <td className="text-left">{value}</td>
@@ -48,11 +48,11 @@ const MobileRecipeDetailsPage = () => {
         </DottedBox>
 
         <DottedBox title="Identification">
-          <p className="text-sm">{recipe.identification}</p>
+          <p className="text-sm">{proj.identification}</p>
         </DottedBox>
 
         <DottedBox title="Batch Notes">
-          <p className="text-sm">{recipe.batchNotes}</p>
+          <p className="text-sm">{proj.batchNotes}</p>
         </DottedBox>
 
         <div className="flex flex-col space-y-2">
@@ -68,4 +68,4 @@ const MobileRecipeDetailsPage = () => {
   );
 };
 
-export default MobileRecipeDetailsPage;
+export default MobileProjDetailsPage;

@@ -1,72 +1,89 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import RetroWindowWrapper from "../RetroWindowWrapper";
 import { projData } from "../../data/data";
 import DottedBox from "../DottedBox";
-import RetroWindowWrapper from "../RetroWindowWrapper";
 
-const MobileProjDetailsPage = () => {
+const DesktopProjDetailsPage = () => {
   const { id } = useParams();
   const proj = projData[id];
 
   if (!proj) {
-    return <div>proj not found</div>;
+    return (
+      <RetroWindowWrapper activeTab="Project">
+        proj not found
+      </RetroWindowWrapper>
+    );
   }
 
   return (
-    <div className="bg-white min-h-screen p-4 font-mono">
-      <h1 className="text-2xl font-bold mb-4 text-center">{proj.name}</h1>
-      <p className="text-sm italic mb-4 text-center">{proj.scientificName}</p>
-
-      <div className="space-y-4">
-        <div className="flex flex-col items-center space-y-4 pb-4">
-          <div className="w-full aspect-square max-w-xs overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-            <img
-              src={proj.images.plant}
-              alt={`${proj.name} plant`}
-              className="w-full h-full object-cover"
-            />
+    <RetroWindowWrapper activeTab="Project">
+      {/* Main content */}
+      <div className="p-4 flex space-x-4 overflow-y-auto h-[calc(100%-2rem)]">
+        <DottedBox
+          className="w-1/2"
+          title={proj.name}
+          subtitle={proj.scientificName}
+          paddingTop="pt-14"
+          titleSize="text-3xl"
+        >
+          <div className="mb-4 flex justify-center space-x-4">
+            <div className="w-36 h-36 overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+              <img
+                src={proj.images.gif}
+                alt={`${proj.name}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-36 h-36 overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+              <img
+                src={proj.images.plant}
+                alt={`${proj.name}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
-          <div className="w-full aspect-square max-w-xs overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-            <img
-              src={proj.images.color}
-              alt={`${proj.name} color`}
-              className="w-full h-full object-cover"
-            />
+
+          <div className="flex justify-center">
+            <table className="text-sm">
+              <tbody>
+                {proj.details.map(([label, value]) => (
+                  <tr key={label}>
+                    <td className="text-right pr-4">{label}</td>
+                    <td className="text-left">{value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-        </div>
-
-        <DottedBox title="Details">
-          <table className="w-full text-sm">
-            <tbody>
-              {proj.details.map(([label, value]) => (
-                <tr key={label}>
-                  <td className="text-right pr-4 font-bold">{label}</td>
-                  <td className="text-left">{value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </DottedBox>
 
-        <DottedBox title="Identification">
-          <p className="text-sm">{proj.identification}</p>
-        </DottedBox>
+        <div className="w-1/2 space-y-4">
+          <DottedBox title="Introduction">
+            <p className="text-sm text-left">{proj.identification}</p>
+          </DottedBox>
 
-        <DottedBox title="Batch Notes">
-          <p className="text-sm">{proj.batchNotes}</p>
-        </DottedBox>
+          <DottedBox title="Notes">
+            <p className="text-sm text-left">{proj.batchNotes}</p>
+          </DottedBox>
 
-        <div className="flex flex-col space-y-2">
-          <button className="w-full border-2 border-black px-2 py-1 text-sm shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
-            I've Dyed It!
-          </button>
-          <button className="w-full border-2 border-black px-2 py-1 text-sm shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
-            Share Your Results
-          </button>
+          <div className="flex space-x-4">
+            <button className="border-2 border-black px-2 py-1 text-sm shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
+              View on Github
+            </button>
+            <button className="border-2 border-black px-2 py-1 text-sm shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
+              Share 
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Scrollbar */}
+      <div className="absolute right-0 top-8 bottom-0 w-4 bg-gray-200 border-l-2 border-black">
+        <div className="w-full h-8 bg-gray-400 border-2 border-black"></div>
+      </div>
+    </RetroWindowWrapper>
   );
 };
 
-export default MobileProjDetailsPage;
+export default DesktopProjDetailsPage;

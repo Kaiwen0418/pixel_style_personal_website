@@ -52,7 +52,7 @@ const RrojectsGrid = ({ projIds, projData }) => {
 
     return (
         <div className="w-9/10">
-            <div className={`grid ${isMobileDevice ? 'grid-cols-1' : 'grid-cols-2'} mb-3`}>
+            <div className={`grid ${isMobileDevice ? 'grid-cols-2' : 'grid-cols-2'} mb-3`}>
                 {projIds.slice(0, 2).map((id) => (
                     <ProjectCard
                         key={id}
@@ -64,7 +64,7 @@ const RrojectsGrid = ({ projIds, projData }) => {
                     />
                 ))}
             </div>
-            <div className={`grid ${isMobileDevice ? 'grid-cols-1' : 'grid-cols-2'}`}>
+            <div className={`grid ${isMobileDevice ? 'grid-cols-2' : 'grid-cols-2'}`}>
                 {projIds.slice(2, 4).map((id) => (
                     <ProjectCard
                         key={id}

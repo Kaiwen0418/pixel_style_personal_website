@@ -15,13 +15,13 @@ const ProjectCard = ({ id, section, curHovered, handleMouseEnter, handleMouseLea
             <div 
                 onMouseEnter={() => handleMouseEnter(id)}
                 onMouseLeave={handleMouseLeave}
-                className={`relative overflow-hidden grayscale-1/4 h-full
-                    ${isMobileDevice ? 'p-2' : 'border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] mr-2'}
+                className={`relative overflow-hidden grayscale-1/4
+                    ${isMobileDevice ? 'aspect-square mb-2' : 'border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] mr-2'}
                     ${otherHovered ? 'opacity-50' : ''} transition-opacity duration-300
                     `}
             >
               <img
-                className='h-full'
+                className='object-cover w-full h-full'
                 src={section.images}
               />
                 <div className={`absolute inset-x-0 bottom-0 p-4 transition-all duration-300 ease-in-out 
@@ -66,19 +66,23 @@ const MorePage = () => {
 
     return (
       <RetroWindowWrapper activeTab="More">
-        <div className="w-full h-full flex items-center justify-center ">
-            <div className={`h-3/4 grid ${isMobileDevice ? 'grid-cols-1' : 'grid-cols-3'}`}>
-                {projIds.slice(0, 3).map((id) => (
-                    <ProjectCard
-                        key={id}
-                        id={id}
-                        section={morePageData[id]}
-                        curHovered={hoveredId}
-                        handleMouseEnter={handleMouseEnter}
-                        handleMouseLeave={handleMouseLeave}
-                    />
-                ))}
-            </div>
+        <div className='mt-5 mb-5'>
+          <h2 className='text-xl'> Explore More about Me </h2>
+          <p> Following sections are mostly about my experience, hobbies and showcasing some of web design and dev, feel free to reach me if you have any question!</p>
+        </div>
+        <div className="w-full flex items-center justify-center ">
+          <div className={` grid ${isMobileDevice ? 'grid-cols-1 ' : 'grid-cols-3'}`}>
+              {projIds.slice(0, 3).map((id) => (
+                  <ProjectCard
+                      key={id}
+                      id={id}
+                      section={morePageData[id]}
+                      curHovered={hoveredId}
+                      handleMouseEnter={handleMouseEnter}
+                      handleMouseLeave={handleMouseLeave}
+                  />
+              ))}
+          </div>
         </div>
       </RetroWindowWrapper>
     );

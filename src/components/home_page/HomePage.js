@@ -1,9 +1,9 @@
 import React from "react";
-import RetroWindowWrapper from "./components/RetroWindowWrapper";
-import PersonalProfile from "./components/home_page/PersonalProfile";
-import ProjectsGrid from "./components/home_page/ProjectGrid";
-import { projData } from "./data/data";
-import { useDevice } from './utils/DeviceContext';
+import RetroWindowWrapper from "../RetroWindowWrapper";
+import PersonalProfile from "./PersonalProfile";
+import ProjectsGrid from "./ProjectGrid";
+import { projData } from "../../data/data";
+import { useDevice } from '../../utils/DeviceContext';
 
 const HomePage = () => {
   const projIds = Object.keys(projData);
@@ -16,7 +16,7 @@ const HomePage = () => {
     );
 
     const gridSection = (
-        <div className={`${isMobileDevice ? "w-full h-2/5" : "w-3/5 h-full"} p-4 overflow-y-auto`}>
+        <div className={`${isMobileDevice ? "w-full h-2/5" : "w-3/5 h-full p-4"}  overflow-y-auto`}>
             <ProjectsGrid projIds={projIds} projData={projData} />
         </div>
     );

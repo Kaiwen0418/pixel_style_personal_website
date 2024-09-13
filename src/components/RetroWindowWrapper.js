@@ -42,7 +42,7 @@ const RetroWindowWrapper = ({ children, activeTab }) => {
 
         {/* Main content */}
         <div className="relative h-[calc(100%-2rem)]">
-          <div className="absolute inset-0 overflow-y-auto p-[12px] pr-[30px]">
+          <div className={`absolute inset-0 overflow-y-auto p-[12px] ${ isMobileDevice ? '' : 'pr-[30px]'}`}>
             {children}
           </div>
           {isMobileDevice ? <></> : scrollbar}

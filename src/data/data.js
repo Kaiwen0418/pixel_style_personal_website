@@ -99,24 +99,25 @@ export const artData = {
 };
 
 export const morePageData = {
-  3 : {
-    name: "ART",
-    images: "/images/more_page/monet.png",
+  1 : {
+    name: "ME",
+    images: "/images/more_page/me.png",
     intro:
-      "Edward Hopper, an American painter, is celebrated for his adept use of light, shadow"
+      "Active and passionate developer, wild interest in tech, deisgn and art, click to know more about my experience"
   },
   2 : {
     name: "DESIGN",
     images: "/images/more_page/design.png",
     intro:
-      "Edward Hopper, an American painter, is celebrated for his adept use of light, shadow"
+      "Painting and designing since high school, welcome to have a look of logos and UIs I made!"
   },
-  1 : {
-    name: "ME",
-    images: "/images/more_page/me.png",
+  3 : {
+    name: "ART",
+    images: "/images/more_page/monet.png",
     intro:
-      "Edward Hopper, an American painter, is celebrated for his adept use of light, shadow"
+      "Simply sharing artworks and pop culture I love, also showcasing some awsome css animation and design~"
   },
+
 };
 
 

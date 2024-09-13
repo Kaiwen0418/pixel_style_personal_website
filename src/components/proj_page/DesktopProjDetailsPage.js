@@ -9,7 +9,11 @@ const DesktopProjDetailsPage = () => {
   const proj = projData[id];
 
   if (!proj) {
-    return <div>proj not found</div>;
+    return (
+      <RetroWindowWrapper activeTab="Project">
+        proj not found
+      </RetroWindowWrapper>
+    );
   }
 
   return (

@@ -86,6 +86,40 @@ export const projData = {
   // Add more recipes here...
 };
 
+export const artData = {
+  'hopper' : {
+    name: "Edward Hopper",
+    images: {
+      base: "/images/art_pop/HOPPER_front.png",
+      front: "/images/art_pop/HOPPER_front.png",
+    },
+    Intro:
+      "Edward Hopper, an American painter, is celebrated for his adept use of light, shadow, and architectural form to capture the essence of American life and its landscapes. His paintings often depict scenes of isolation within urban settings, which resonate with me personally because they evoke an emotional response through seemingly simple, everyday scenes. What draws me most to Hopper’s work is how he captures moments of solitude that suggest a deeper significance, inviting viewers to reflect on their own moments of loneliness and introspection."
+  },
+};
+
+export const morePageData = {
+  3 : {
+    name: "ART",
+    images: "/images/more_page/monet.png",
+    intro:
+      "Edward Hopper, an American painter, is celebrated for his adept use of light, shadow"
+  },
+  2 : {
+    name: "DESIGN",
+    images: "/images/more_page/design.png",
+    intro:
+      "Edward Hopper, an American painter, is celebrated for his adept use of light, shadow"
+  },
+  1 : {
+    name: "ME",
+    images: "/images/more_page/me.png",
+    intro:
+      "Edward Hopper, an American painter, is celebrated for his adept use of light, shadow"
+  },
+};
+
+
 export const personalProfile = {
   1: {
     name: "Kaiwen Liu",
@@ -129,4 +163,4 @@ export const personalProfile = {
       ["dye time", "1 hour (or until vibrant)"]
     ]
   }
-}
+};

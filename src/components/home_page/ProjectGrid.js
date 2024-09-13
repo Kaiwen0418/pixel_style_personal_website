@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import { useDevice } from '../utils/DeviceContext'; // Ensure the context hook is correctly imported
-import HoverPlayImage from "./projs/HoverPlayImage";
+import { useDevice } from '../../utils/DeviceContext'; // Ensure the context hook is correctly imported
+import HoverPlayImage from "../HoverPlayImage";
 
 const ProjectCard = ({ id, proj, isHovered, handleMouseEnter, handleMouseLeave }) => {
     const isMobileDevice = useDevice(); // Using the context to determine if it's a mobile device
 
     return (
-        <Link to={`/proj/${id}`}>
+        <Link to={`/project/${id}`}>
             <div 
                 onMouseEnter={() => handleMouseEnter(id)}
                 onMouseLeave={handleMouseLeave}

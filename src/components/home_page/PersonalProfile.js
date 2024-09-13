@@ -1,7 +1,7 @@
 import React from "react";
-import { personalProfile } from "../data/data";
-import { useDevice } from '../utils/DeviceContext';
-import DottedBox from "./DottedBox";
+import { personalProfile } from "../../data/data";
+import { useDevice } from '../../utils/DeviceContext';
+import DottedBox from "../DottedBox";
 
 
 const PersonalProfile = () => {

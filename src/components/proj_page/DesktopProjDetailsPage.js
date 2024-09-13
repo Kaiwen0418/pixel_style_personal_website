@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import RetroWindowWrapper from "./RetroWindowWrapper";
-import { projData } from "../data/data";
-import DottedBox from "./DottedBox";
+import RetroWindowWrapper from "../RetroWindowWrapper";
+import { projData } from "../../data/data";
+import DottedBox from "../DottedBox";
 
 const DesktopProjDetailsPage = () => {
   const { id } = useParams();
@@ -13,7 +13,7 @@ const DesktopProjDetailsPage = () => {
   }
 
   return (
-    <RetroWindowWrapper activeTab="Index">
+    <RetroWindowWrapper activeTab="Project">
       {/* Main content */}
       <div className="p-4 flex space-x-4 overflow-y-auto h-[calc(100%-2rem)]">
         <DottedBox
@@ -26,15 +26,15 @@ const DesktopProjDetailsPage = () => {
           <div className="mb-4 flex justify-center space-x-4">
             <div className="w-36 h-36 overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
               <img
-                src={proj.images.color}
-                alt={`${proj.name} color`}
+                src={proj.images.gif}
+                alt={`${proj.name}`}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="w-36 h-36 overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
               <img
                 src={proj.images.plant}
-                alt={`${proj.name} plant`}
+                alt={`${proj.name}`}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -55,20 +55,20 @@ const DesktopProjDetailsPage = () => {
         </DottedBox>
 
         <div className="w-1/2 space-y-4">
-          <DottedBox title="Identification">
+          <DottedBox title="Introduction">
             <p className="text-sm text-left">{proj.identification}</p>
           </DottedBox>
 
-          <DottedBox title="Batch Notes">
+          <DottedBox title="Notes">
             <p className="text-sm text-left">{proj.batchNotes}</p>
           </DottedBox>
 
           <div className="flex space-x-4">
             <button className="border-2 border-black px-2 py-1 text-sm shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
-              I've Dyed It!
+              View on Github
             </button>
             <button className="border-2 border-black px-2 py-1 text-sm shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
-              Share Your Results
+              Share 
             </button>
           </div>
         </div>

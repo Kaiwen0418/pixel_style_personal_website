@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { projData } from "../data/data";
-import DottedBox from "./DottedBox";
+import { projData } from "../../data/data";
+import DottedBox from "../DottedBox";
+import RetroWindowWrapper from "../RetroWindowWrapper";
 
 const MobileProjDetailsPage = () => {
   const { id } = useParams();

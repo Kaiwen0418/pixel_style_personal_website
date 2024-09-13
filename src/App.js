@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import IndexPage from "./IndexPage";
-import RecipeDetailsPage from "./components/RecipeDetailsPage";
+import HomePage from "./HomePage";
+import ProjDetailsPage from "./components/proj_page/ProjDetailsPage";
 import ArtworkPage from "./components/ArtworkPage";
 import ProcessPage from "./components/ProcessPage";
 import AboutPage from "./components/AboutPage";
@@ -14,10 +14,10 @@ const App = () => {
     <ParticlesBackground/>
       <Router>
         <Routes>
-          <Route path="/" element={<IndexPage />} />
-          <Route path="/recipe/:id" element={<RecipeDetailsPage />} />
-          <Route path="/artwork" element={<ArtworkPage />} />
-          <Route path="/process" element={<ProcessPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project/:id" element={<ProjDetailsPage />} />
+          <Route path="/project" element={<ArtworkPage />} />
+          <Route path="/more" element={<ProcessPage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Router>

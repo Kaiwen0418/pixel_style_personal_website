@@ -1,11 +1,11 @@
 import React from "react";
 import RetroWindowWrapper from "./components/RetroWindowWrapper";
-import PersonalProfile from "./components/PersonalProfile";
-import ProjectsGrid from "./components/ProjectGrid";
+import PersonalProfile from "./components/home_page/PersonalProfile";
+import ProjectsGrid from "./components/home_page/ProjectGrid";
 import { projData } from "./data/data";
 import { useDevice } from './utils/DeviceContext';
 
-const IndexPage = () => {
+const HomePage = () => {
   const projIds = Object.keys(projData);
   const isMobileDevice = useDevice();
 
@@ -22,7 +22,7 @@ const IndexPage = () => {
     );
 
     return (
-        <RetroWindowWrapper activeTab="Index">
+        <RetroWindowWrapper activeTab="Home">
             <div className={`flex ${isMobileDevice ? "flex-col" : "flex-row  mt-5"} overflow-hidden`}>
                 {profileSection}
                 {gridSection}
@@ -31,4 +31,4 @@ const IndexPage = () => {
     );
 };
 
-export default IndexPage;
+export default HomePage;

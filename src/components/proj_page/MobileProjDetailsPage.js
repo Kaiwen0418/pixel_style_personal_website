@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import RetroWindowWrapper from "../RetroWindowWrapper";
 import { projData,iconList } from "../../data/data";
 import DottedBox from "../DottedBox";
 
@@ -8,17 +7,7 @@ const MobileProjDetailsPage = () => {
   const { id } = useParams();
   const proj = projData[id];
 
-  if (!proj) {
-    return (
-      <RetroWindowWrapper activeTab="Project">
-        proj not found
-      </RetroWindowWrapper>
-    );
-  }
-
   return (
-    <RetroWindowWrapper activeTab="Project">
-      {/* Main content */}
       <div className="p-4 flex flex-col overflow-y-auto space-y-4">
         <DottedBox
           className=""
@@ -87,8 +76,6 @@ const MobileProjDetailsPage = () => {
           </div>
         </div>
       </div>
-
-    </RetroWindowWrapper>
   );
 };
 

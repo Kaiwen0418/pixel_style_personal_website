@@ -23,8 +23,14 @@ module.exports = {
           '0%': { transform: 'translateX(100%) translateY(-50%) scaleY(3)' },
           '100%': { transform: 'translateX(0) translateY(-50%) scaleY(3)' },
         },
+        blink: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0 }
+        }
       },
+
       animation: {
+        blink: 'blink 1s linear infinite',
         'slide-in-right': 'slideInFromRight 1s ease-out forwards',
       },
     },

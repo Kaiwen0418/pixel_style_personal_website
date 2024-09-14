@@ -2,11 +2,9 @@ import React from "react";
 import RetroWindowWrapper from "../RetroWindowWrapper";
 import PersonalProfile from "./PersonalProfile";
 import ProjectsGrid from "./ProjectGrid";
-import { projData } from "../../data/data";
 import { useDevice } from '../../utils/DeviceContext';
 
 const HomePage = () => {
-  const projIds = Object.keys(projData);
   const isMobileDevice = useDevice();
 
   const profileSection = (
@@ -17,7 +15,7 @@ const HomePage = () => {
 
     const gridSection = (
         <div className={`${isMobileDevice ? "w-full h-2/5" : "w-3/5 h-full p-4"}  overflow-y-auto`}>
-            <ProjectsGrid projIds={projIds} projData={projData} />
+            <ProjectsGrid />
         </div>
     );
 

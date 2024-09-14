@@ -6,26 +6,13 @@ const AboutPage = () => {
   return (
     <RetroWindowWrapper activeTab="About">
       <div className="p-4 overflow-y-auto h-[calc(100%-2rem)]">
-        <DottedBox title="Artist Statement">
-          <p className="text-sm mb-4">
-            My work explores the modern relationship between humans and native
-            ecosystems. Both intentionally and inadvertently, human movement has
-            introduced invasive species into new environments. Often these
-            species were brought for their inherit value: Garlic Mustard is a
-            delicious cooking herb, English Ivy is a beautiful material to make
-            soap. Many of our introduced plants thrive and out-compete native
-            plants, through no fault of their own. And now both we and our
-            native landscapes coexist with them in a new relationship. We walk
-            past hundreds of species of plants in a daily routine, not knowing
-            their names or their native homes. We have no ability to recognize a
-            native plant from an invasive one, green is green.
-          </p>
-          <p className="text-sm">
-            How can we encourage responsibility for environmental restoration?
-            And can we bring joy and curiosity to the process? Environmental
-            restoration is essential to protect biodiversity. Biodiversity is
-            essential to creating a climate-change resilient environment.
-          </p>
+        <DottedBox title="Statement">
+        <p className="text-sm mb-4">
+          This site is dedicated to sharing my interests and showcasing my projects, combining my passion for technology and creative design. You'll find a diverse range of topics from embedded systems to modern web applications, reflecting the breadth of my experience and curiosity in the tech world.
+        </p>
+        <p className="text-sm">
+          About the assets and texts used across this site, a significant acknowledgment goes to the AI-generated content and open-source graphics that have been instrumental in enriching the visual and informational quality of my presentations. Thanks to all contributors and data sources that have made these resources available, enhancing the educational and aesthetic value of this platform.
+        </p>
         </DottedBox>
       </div>
     </RetroWindowWrapper>

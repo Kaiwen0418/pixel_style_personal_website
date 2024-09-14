@@ -1,12 +1,10 @@
 import React from "react";
 import { personalProfile, iconList } from "../../data/data";
-import { useDevice } from '../../utils/DeviceContext';
 import DottedBox from "../DottedBox";
 
 
 const PersonalProfile = () => {
     const profile = personalProfile[1]
-    const isMobileDevice = useDevice();
 
     if (!profile) {
         return <div>Profile not found</div>;

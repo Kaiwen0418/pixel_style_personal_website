@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import RetroWindowWrapper from "../RetroWindowWrapper";
-import { projData } from "../../data/data";
+import { projData,iconList } from "../../data/data";
 import DottedBox from "../DottedBox";
 
-const DesktopProjDetailsPage = () => {
+const MobileProjDetailsPage = () => {
   const { id } = useParams();
   const proj = projData[id];
 
@@ -19,13 +19,13 @@ const DesktopProjDetailsPage = () => {
   return (
     <RetroWindowWrapper activeTab="Project">
       {/* Main content */}
-      <div className="p-4 flex space-x-4 overflow-y-auto h-[calc(100%-2rem)]">
+      <div className="p-4 flex flex-col overflow-y-auto space-y-4">
         <DottedBox
-          className="w-1/2"
+          className=""
           title={proj.name}
-          subtitle={proj.scientificName}
+          subtitle={proj.brief}
           paddingTop="pt-14"
-          titleSize="text-3xl"
+          titleSize="text-sm"
         >
           <div className="mb-4 flex justify-center space-x-4">
             <div className="w-36 h-36 overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
@@ -37,7 +37,7 @@ const DesktopProjDetailsPage = () => {
             </div>
             <div className="w-36 h-36 overflow-hidden border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
               <img
-                src={proj.images.plant}
+                src={proj.images.overview}
                 alt={`${proj.name}`}
                 className="w-full h-full object-cover"
               />
@@ -50,24 +50,34 @@ const DesktopProjDetailsPage = () => {
                 {proj.details.map(([label, value]) => (
                   <tr key={label}>
                     <td className="text-right pr-4">{label}</td>
-                    <td className="text-left">{value}</td>
+                    <td className="text-left text-xs">{value}</td>
                   </tr>
                 ))}
+                <tr key={'tech'} className="mt-2">
+                  <td className="text-right pr-2">{'Tech-stack:'}</td>
+                  <td className="text-left ">                
+                      <div className="grid grid-cols-4 gap-2 mt-2">
+                          {iconList.map((icon, index) => (
+                              <img key={index} src={icon} alt="Icon" className="w-5 h-5 " />
+                          ))}
+                      </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
         </DottedBox>
 
-        <div className="w-1/2 space-y-4">
+        <div className="w-full flex-col flex justify-between">
           <DottedBox title="Introduction">
-            <p className="text-sm text-left">{proj.identification}</p>
+            <p className="text-sm text-left p-2">{proj.description}</p>
           </DottedBox>
 
           <DottedBox title="Notes">
-            <p className="text-sm text-left">{proj.batchNotes}</p>
+            <p className="text-xs text-left p-2">{proj.projectHighlights}</p>
           </DottedBox>
 
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 p-2">
             <button className="border-2 border-black px-2 py-1 text-sm shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
               View on Github
             </button>
@@ -78,12 +88,8 @@ const DesktopProjDetailsPage = () => {
         </div>
       </div>
 
-      {/* Scrollbar */}
-      <div className="absolute right-0 top-8 bottom-0 w-4 bg-gray-200 border-l-2 border-black">
-        <div className="w-full h-8 bg-gray-400 border-2 border-black"></div>
-      </div>
     </RetroWindowWrapper>
   );
 };
 
-export default DesktopProjDetailsPage;
+export default MobileProjDetailsPage;

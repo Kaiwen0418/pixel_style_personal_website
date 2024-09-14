@@ -1,5 +1,5 @@
 import React from "react";
-import { personalProfile } from "../../data/data";
+import { personalProfile, iconList } from "../../data/data";
 import { useDevice } from '../../utils/DeviceContext';
 import DottedBox from "../DottedBox";
 
@@ -12,18 +12,28 @@ const PersonalProfile = () => {
         return <div>Profile not found</div>;
     }
 
-    const details = isMobileDevice ? profile.details.slice(0,2) : profile.details
+    const details = profile.details
 
     const detailSection = (
-            <div className="flex justify-center">
+            <div className="flex flex-col justify-center items-center ">
                 <table className="text-sm">
                     <tbody>
-                    {details.map(([label, value]) => (
-                        <tr key={label}>
-                            <td className="text-right pr-4">{label}</td>
-                            <td className="text-left">{value}</td>
+                        {details.map(([label, value]) => (
+                            <tr key={label}>
+                                <td className="text-right pr-2">{label}</td>
+                                <td className="text-left text-xs">{value}</td>
+                            </tr>
+                        ))}
+                        <tr key={'tech'} className="mt-2">
+                            <td className="text-right pr-2">{'Tech-stack:'}</td>
+                            <td className="text-left ">                
+                                <div className="grid grid-cols-4 gap-2 mt-2">
+                                    {iconList.map((icon, index) => (
+                                        <img key={index} src={icon} alt="Icon" className="w-5 h-5 " />
+                                    ))}
+                                </div>
+                            </td>
                         </tr>
-                    ))}
                     </tbody>
                 </table>
             </div>

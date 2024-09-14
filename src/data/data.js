@@ -1,89 +1,73 @@
 export const projData = {
   1: {
-    name: "Camera Embed System",
-    scientificName: "Alliaria petiolata",
+    name: "Embedded Security System",
+    description: "A sophisticated security system leveraging facial recognition technology to enhance security measures. Express.js, Vue.JS, MongoDB - Deployed on Raspberry Pi with real-time facial recognition and web interface controls.",
+    brief: "Face Recognition Embedded Security System",
     images: {
       gif: "/images/proj_gif/camera.gif",
       static: "/images/proj_static/camera.png",
-      plant: "/images/personal_site1.png",
+      overview: "/images/personal_site1.png",
     },
     details: [
-      ["condition", "fresh"],
-      ["parts", "leaves and stems"],
-      ["pH", "9"],
-      ["ratio", "3:1"],
-      ["temp", "180F"],
-      ["extract time", "1 hr"],
-      ["dye time", "1 hr"],
+      ["Language", "Python, JavaScript"],
+      ["Platform", "Raspberry Pi"],
+      ["Front-end", "Vue.JS"],
+      ["Back-end", "Express.js, MongoDB"],
     ],
-    identification:
-      "Garlic mustard can be detected by sight and smell. The leaves are broad with scalloped edges. In springtime they produce small white flowers. The smell is very similar to garlic.",
-    batchNotes: "Used leaves and stems 24 hours after harvesting.",
+    projectHighlights: "Designed and developed user interfaces for device control, visitor statistics, and live video streaming, enhancing security measures through facial recognition technology.",
   },
   2: {
     name: "CNC Scheduling System",
-    scientificName: "Alliaria petiolata",
+    description: "A state-of-the-art scheduling system that optimizes factory operations through advanced data analysis.NumPy, Flask, React.JS - Developed for CloudNC Ltd to process real-time factory data and manage workflow.",
+    brief: "CNC Factory Scheduling System",
     images: {
       gif: "/images/proj_gif/cnc.gif",
       static: "/images/proj_static/cnc.png",
-      plant: "/images/personal_site2.png",
+      overview: "/images/personal_site2.png",
     },
     details: [
-      ["condition", "fresh"],
-      ["parts", "leaves and stems"],
-      ["pH", "9"],
-      ["ratio", "3:1"],
-      ["temp", "180F"],
-      ["extract time", "1 hr"],
-      ["dye time", "1 hr"],
+      ["Language", "Python, JavaScript"],
+      ["Platform", "Web-based"],
+      ["Front-end", "React.JS"],
+      ["Back-end", "Flask, NumPy"],
     ],
-    identification:
-        "Garlic mustard can be detected by sight and smell. The leaves are broad with scalloped edges. In springtime they produce small white flowers. The smell is very similar to garlic.",
-    batchNotes: "Used leaves and stems 24 hours after harvesting.",
+    projectHighlights: "Spearheaded the development of a workflow analysis tool that features real-time data processing and a user-friendly dashboard for efficient factory scheduling.",
   },
   3: {
     name: "Circuit Simulator",
-    scientificName: "Alliaria petiolata",
+    description: "A re-implementation of the Imperial College EE department's circuit simulator, enhanced for modern computing environments. F#, Avalonia.UI - Reimplemented on the .NET platform with functional programming and MVU UI design.",
+    brief: "Circuit Simulator Re-Implementation",
     images: {
       gif: "/images/proj_gif/circuit.gif",
       static: "/images/proj_static/circuit.png",
-      plant: "/images/personal_site3.png",
+      overview: "/images/personal_site3.png",
     },
     details: [
-      ["condition", "fresh"],
-      ["parts", "leaves and stems"],
-      ["pH", "9"],
-      ["ratio", "3:1"],
-      ["temp", "180F"],
-      ["extract time", "1 hr"],
-      ["dye time", "1 hr"],
+      ["Language", "F#"],
+      ["Platform", "Cross-platform"],
+      ["Front-end", "Avalonia.UI"],
+      ["Back-end", "N/A"],
     ],
-    identification:
-        "Garlic mustard can be detected by sight and smell. The leaves are broad with scalloped edges. In springtime they produce small white flowers. The smell is very similar to garlic.",
-    batchNotes: "Used leaves and stems 24 hours after harvesting.",
+    projectHighlights: "Achieved a 40% improvement in RAM consumption, demonstrating significant performance optimizations and modernizing the application for current technology standards.",
   },
   4: {
     name: "Math to Braille OCR",
-    scientificName: "Alliaria petiolata",
+    description: "An OCR system that translates printed mathematical content into Braille, making math education more accessible.",
+    brief: "Utilizes OCR to convert math equations into Braille",
     images: {
       gif: "/images/proj_gif/braille.gif",
       static: "/images/proj_static/braille.png",
-      plant: "/images/personal_site4.png",
+      overview: "/images/personal_site4.png",
     },
     details: [
-      ["condition", "fresh"],
-      ["parts", "leaves and stems"],
-      ["pH", "9"],
-      ["ratio", "3:1"],
-      ["temp", "180F"],
-      ["extract time", "1 hr"],
-      ["dye time", "1 hr"],
+      ["Language", "Python"],
+      ["Platform", "Windows"],
+      ["Front-end", "Tkinter"],
+      ["Back-end", "Tesseract OCR engine"],
     ],
-    identification:
-        "Garlic mustard can be detected by sight and smell. The leaves are broad with scalloped edges. In springtime they produce small white flowers. The smell is very similar to garlic.",
-    batchNotes: "Used leaves and stems 24 hours after harvesting.",
+    projectHighlights: "Empowers visually impaired students by providing them with the tools necessary to study complex mathematical content independently.",
   },
-  // Add more recipes here...
+  // Additional projects can be added here following the same structure.
 };
 
 export const artData = {
@@ -124,16 +108,14 @@ export const morePageData = {
 export const personalProfile = {
   1: {
     name: "Kaiwen Liu",
-    alias: "Pixel Paladin",
+    alias: "Full-stack Dev",
     images: {
       avatar: "/images/pixel_me.png"
     },
     details: [
-      ["creativity", "95/100"],
-      ["stamina", "90/100 "],
-      ["Code Wizardry", "Level Mage"],
-      ["Achievements", "Survivor of 48-Hour Hackathons, Conqueror of Cascade Mountains"]
-
+      ["Edu:", "Imperial College London"],
+      ["Degree:", "EIE MEng"],
+      ["Achievements:", "Survivor of 48-Hour Hackathons, Conqueror of Cascade Mountains"],
     ],
     skills: [
       ["JavaScript Mastery", "Level Expert"],
@@ -165,3 +147,14 @@ export const personalProfile = {
     ]
   }
 };
+
+export const iconList = [
+  "/icon/c++.jpg",
+  "/icon/js.png",
+  "/icon/node.png",
+  "/icon/python.png",
+  "/icon/react.png",
+  "/icon/vue.png",
+  "/icon/fsharp.png",
+  "/icon/git.jpg"
+]

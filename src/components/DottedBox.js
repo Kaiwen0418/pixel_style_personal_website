@@ -18,12 +18,12 @@ const DottedBox = ({
     {title && (
       <div className="absolute top-0 left-0 w-full -mt-4 text-center">
         <span className="relative inline-block px-4 bg-white">
-          <span className="relative z-10 whitespace-nowrap text-2xl font-bold">
+          <span className={`relative z-10 whitespace-nowrap font-bold ${titleSize}`}>
             {title}
           </span>
           <span className="absolute inset-0 bg-white"></span>
         </span>
-        {subtitle && <div className="mt-1 text-sm italic">{subtitle}</div>}
+        {subtitle && <div className="mt-1 text-xs italic">{subtitle}</div>}
       </div>
     )}
     <div className={`${paddingTop} p-2`}>{children}</div>

@@ -27,7 +27,6 @@ const ProjectCard = ({ id, proj, curHovered, handleMouseEnter, handleMouseLeave 
                 <img
                     className="w-4/5 h-4/5 object-cover m-auto"
                     src={isHovered ? proj.images.gif : proj.images.static} // Path to your static image
-                    gifSrc={proj.images.gif} // Path to your GIF
                     alt={proj.name}
                 />
                 <div className="flex items-center w-4/5 m-auto pl-2">  {/* Added pl-5 for padding left 20px */}
